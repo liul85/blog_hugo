@@ -20,9 +20,9 @@ url: /2014/05/26/understanding-rake-task
 ### 安装Rake
 
 非常简单, gem 安装搞定！
-{% highlight sh %}
+```sh
 $ gem install rake
-{% endhighlight %}
+```
 
 
 ### 学写Rake脚本
@@ -30,39 +30,39 @@ $ gem install rake
 * 简单rake任务
 
 创建一个Rakefile，写一个简单的rake任务，从hello world开始吧。
-{% highlight ruby %}
+```ruby
 desc "say hello"
 task :hello do
   puts "hello, world!"
 end
-{% endhighlight %}
+```
 
 然后在文件目录下执行 rake -T 就能看到这个任务, rake hello就可以执行rake任务了。
-{% highlight sh %}
+```sh
 ➜  rake -T
 rake hello  # say hello
 ➜  rake hello
 hello world!
-{% endhighlight %}
+```
 
 * 指定默认任务
 
 在Rakefile中加入默认任务, 然后执行rake不指定任务名，就执行默认任务。
-{% highlight sh %}
+```sh
 task :default => :hello
-{% endhighlight %}
+```
 
-{% highlight sh %}
+```sh
 ➜  rake
 hello world!
-{% endhighlight %}
+```
 
 * 创建具有依赖关系的任务
 
 一般我们在执行一些脚本时候，会有一些预制条件，比如跑测试时候，需要提前在数据库中插入一些测试数据。在rake中，可以把预制条件写为一个任务，其他任务依赖于这个时候，可以把它加到依赖关系中
 
 
-{% highlight ruby %}
+```ruby
 desc "purchase vegetables"
 task :purchase_vegetables do
 	puts "Buy some potatoes from Walmart!"
@@ -72,7 +72,7 @@ desc "cook"
 task :cook => :purchase_vegetables do
 	puts "I am cooking..."
 end
-{% endhighlight %}
+```
 
 在这个例子中，做饭依赖于买菜，我们把给做饭加一个依赖任务， 这样在执行cook任务时候，purchase_vegetables 任务会被自动执行。
 
@@ -80,7 +80,7 @@ end
 
 如果在一个项目中有多个模块，由很多rake任务，那么我们可以用命名空间来防止rake任务名重复
 
-{% highlight ruby %}
+```ruby
 namespace "main" do
 	desc "build the main programe"
 	task :build do
@@ -94,7 +94,7 @@ namespace "module1" do
 		#build the module1.
 	end
 end
-{% endhighlight %}
+```
 
 这样即使同名的任务在一个Rakefile里，由于它们属于不同的namespace，任务之间胡不相干。在调用的时候加上namespace名字即可。namespace还支持嵌套。
 
@@ -103,34 +103,34 @@ end
 很多情况我们需要rake任务能够接受参数来扩展可用性，在rake 0.8.0 版本后可以支持直接传入参数
 
 
-{% highlight ruby %}
+```ruby
 desc "build the programe"
 task :build, [:programename, :programeversion] do |t, args|
 	puts "building programe #{args.programename} with version #{args.programeversion} successful!"
 end
-{% endhighlight %}
+```
 
 
 查看rake任务时候可以看到build任务可以以数组的形式接受2个参数
-{% highlight sh %}
+```sh
 ➜ rake -T
 rake build[programename,programeversion]  # build the programe
 ➜ rake build[mysite, 0.1.0]
 building programe mysite with version 0.1.0 successful!
-{% endhighlight %}
+```
 
 *Notes*
 如果你用的是zsh，那么可能会碰到zsh返回如下:
-{% highlight sh %}
+```sh
 zsh: no matches found: build[mysite,0.1.0]
-{% endhighlight %}
+```
 在zsh下必须用单引号把传递的参数引起来:
-{% highlight sh %}
+```sh
 rake build'[mysite, 0.1.0]'
-{% endhighlight %}
+```
 如果不想每次都这么麻烦，可以在~/.zshrc中把glob对rake的扩展关掉:
-{% highlight sh %}
+```sh
 alias rake="noglob rake"
-{% endhighlight %}
+```
 
 这些都是rake的最基本用法，更多更高级的特性可以从rake[官网](http://rake.rubyforge.org/)学习

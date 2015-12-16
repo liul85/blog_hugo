@@ -22,30 +22,30 @@ docker 是一个基于 linux container 的应用程序执行容器，类似于�
 
 #### 用HomeBrew 安装 docker
 首先用homebrew安装cask
-{% highlight sh %}
+```sh
 $ brew tap phinze/homebrew-cask
 $ brew install brew-cask
-{% endhighlight %}
+```
 在OSX上运行docker还需要virtual box
 
-{% highlight sh %}
+```sh
 $ brew cask install virtualbox
-{% endhighlight %}
+```
 
 然后我们可以安装[boot2docker](https://github.com/boot2docker/boot2docker), boot2docker是一个linux下轻量级的运行docker的工具，用来管理docker的守护进程。
 
-{% highlight sh%}
+```sh
 $ brew install boot2docker
 $ boot2docker init
 $ boot2docker up
 $ export DOCKER_HOST=tcp://x.x.x.x:2375
-{% endhighlight %}
+```
 
 然后我们就可以安装docker了
 
-{% highlight sh %}
+```sh
 brew install docker
-{% endhighlight %}
+```
 
 Done!
 
@@ -55,7 +55,7 @@ docker装好了，我们来做一些简单的事情吧。
 
 不免俗套来个Hello World
 
-{% highlight sh %}
+```sh
 $ docker run ubuntu /bin/echo 'Hello World'
 Unable to find image 'ubuntu' locally
 Pulling repository ubuntu
@@ -66,7 +66,7 @@ d7ac5e4f1812: Download complete
 83ff768040a0: Download complete
 6c37f792ddac: Download complete
 Hello World
-{% endhighlight %}
+```
 
 ```docker run``` 命令是运行一个docker容器，我们指定image是ubunt，然后docker会在本地寻找，如果本地没有，docker会去[Docker Hub](https://hub.docker.com/)上找，然后下载到本地，ubuntu这个容器起来后就会运行 ```/bin/echo 'Hello World‘``` 命令。
 
@@ -90,6 +90,6 @@ docker run 的一些常用参数
 - ```-e``` 指定container的环境变量  
 
 下面这个命令run一个java8的container将本地的~/.gradle和~/src mount到指定目录，设置环境变量JAVA_TOOL_OPTIONS并执行gradlew run命令, run完之后自己删除container.
-{% highlight sh%}
+```sh
 docker run -it -v ~/.gradle:/root/gradle -v ~/src:/root/source -w /root/source --rm -e JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8 java:openjdk-8 ./gradlew run
-{% endhighlight%}
+```

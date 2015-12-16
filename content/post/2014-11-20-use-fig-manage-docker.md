@@ -13,7 +13,7 @@ url: /2014/11/20/use-fig-manage-docker
 Fig 可以非常方面的管理自己常用的容器，非常方便的定义自己的多service。
 来个例子了解一下fig的方便快捷，比如项目中有多个services，如果用docker来将它玩起来，你可以这么写
 
-{% highlight yaml %}
+```yaml
 module1:
   image: java:openjdk-8
   volumes:
@@ -34,7 +34,7 @@ module2:
 
 redis:
   image: redis
-{% endhighlight %}
+```
   
 可以看到在fig.yml中定义了3个task，module1、module2和redis，每个中都用```image```指定了docker run的用的image，用```volumes```指定了要mount的目录，```working_dir```指定了container的默认工作目录，```links```指定这个task依赖的其他jobs，将多个containers link到一起，```command```指定了container中run的命令。
 
