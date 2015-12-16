@@ -1,0 +1,11 @@
+baseurl = "http://localhost/"
+languageCode = "en-us"
+title = "Liul85 blog"
+theme = "purehugo"
+Paginate = 10
+disqusShortname = "liul85"
+
+[params]
+  twitterName = "liul85"
+  githubName = "liul85"
+  description = "life"
