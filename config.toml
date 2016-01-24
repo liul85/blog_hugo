@@ -1,11 +1,46 @@
-baseurl = "http://liul85.github.io/"
+# Site settings
+baseurl = "http://liul85.me/"
 languageCode = "en-us"
-title = "Liul85 blog"
-theme = "purehugo"
-Paginate = 10
+title = "liul85 blog"
+theme = "hugo-cactus-theme"
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+# Disable comments by leaving disqusShortname empty
 disqusShortname = "liul85"
 
 [params]
-  twitterName = "liul85"
-  githubName = "liul85"
-  description = "life"
+    name = "liul85"
+    description = "learn, think, write..."
+    bio = "software, guitar"
+    # Enter optionally your twitter account
+    twitter = "liul85"
+    enableRSS = true
+
+    # The variables below are optionally too and can be used to
+    # translate or customize each string of the theme.
+
+    # Navigation links
+    home = ""
+    about = ""
+    subscribe = ""
+    # Pagination links
+    olderPosts = ""
+    newerPosts = ""
+    readMore = ""
+    copyright = ""
+    # Sharing options and author information in posts
+    aboutAuthor = "Love software, Love guitar."
+    tweet = ""
+    share = ""
+    # 404 page
+    title404 = ""
+    subtitle404 = ""
+
+    # Social icons style - circle, rounded, or empty
+    socialIconStyle = "circle"
+
+# Add additional social link entries underneath
+[social]
+    twitter  = "https://www.twitter.com/liul85"
+    facebook = "https://www.facebook.com/liul85"
+    github   = "https://www.github.com/liul85"
