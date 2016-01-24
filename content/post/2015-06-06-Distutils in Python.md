@@ -6,7 +6,7 @@ tags:
 - distutils
 - python
 title: Distutils in Python
-url: /2015/06/06/Distutils-in-Python
+url: /2015/06/06/distutils-in-python
 ---
 
 
