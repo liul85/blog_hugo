@@ -1,8 +1,8 @@
 # Site settings
-baseurl = "http://liul85.me/"
+baseurl = "http://blog.liul85.com/"
 languageCode = "en-us"
 title = "liul85 blog"
-theme = "hugo-cactus-theme"
+theme = "hugo-theme-minos"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 # Disable comments by leaving disqusShortname empty
