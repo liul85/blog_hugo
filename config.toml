@@ -19,10 +19,11 @@ disqusShortname = "liul85"
     # The variables below are optionally too and can be used to
     # translate or customize each string of the theme.
 
+    smartToc = true
     # Navigation links
-    home = ""
-    about = ""
-    subscribe = ""
+    home = "/"
+    about = "/about"
+    subscribe = "/rss"
     # Pagination links
     olderPosts = ""
     newerPosts = ""
