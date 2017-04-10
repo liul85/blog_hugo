@@ -1,47 +1,25 @@
-# Site settings
-baseurl = "http://blog.liul85.com/"
-languageCode = "en-us"
-title = "liul85 blog"
-theme = "hugo-theme-minos"
-# Enter your tracking code to enable Google Analytics
-googleAnalytics = ""
-# Disable comments by leaving disqusShortname empty
+baseurl = "http://blog.liul85.com"
+languageCode = "en-US"
+title = "liul85"
+theme = "hemingway"
+copyright = "&copy; theme by <a href=\"https://github.com/tanksuzuki\">Asuka Suzuki</a> 2016"
 disqusShortname = "liul85"
+googleAnalytics = ""
 
 [params]
-    name = "liul85"
-    description = "learn, think, write..."
-    bio = "software, guitar"
-    # Enter optionally your twitter account
-    twitter = "liul85"
-    enableRSS = true
 
-    # The variables below are optionally too and can be used to
-    # translate or customize each string of the theme.
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile", "javascript"]
 
-    smartToc = true
-    # Navigation links
-    home = "/"
-    about = "/about"
-    subscribe = "/rss"
-    # Pagination links
-    olderPosts = ""
-    newerPosts = ""
-    readMore = ""
-    copyright = ""
-    # Sharing options and author information in posts
-    aboutAuthor = "Love software, Love guitar."
-    tweet = ""
-    share = ""
-    # 404 page
-    title404 = ""
-    subtitle404 = ""
+[[params.social]]
+url = "https://github.com/liul85"
+fa_icon = "fa-github"
 
-    # Social icons style - circle, rounded, or empty
-    socialIconStyle = "circle"
+[[params.social]]
+url = "https://twitter.com/liul85"
+fa_icon = "fa-twitter"
 
-# Add additional social link entries underneath
-[social]
-    twitter  = "https://www.twitter.com/liul85"
-    facebook = "https://www.facebook.com/liul85"
-    github   = "https://www.github.com/liul85"
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
