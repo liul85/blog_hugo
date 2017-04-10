@@ -1,12 +1,13 @@
-+++
-date = "2017-04-01T08:35:17+08:00"
-title = "函数式编程初探"
-menu = ""
-Categories = ["Development","functional programming"]
-Tags = ["functional programming"]
-Description = ""
-
-+++
+---
+date: "2017-04-05T08:35:17+08:00"
+title: "函数式编程初探"
+categories:
+  - Development,
+  - functional programming
+tags:
+  - functional programming
+url: /2017/04/05/functional-programming
+---
 
 ## 一等公民
 
@@ -247,6 +248,23 @@ compose的顺序反过来就是pipeline，喜欢用pipe(f1, f2, f3, f4)(data)的
 
 # PointFree
 > Pointfree style means never having to say your data
+
+永远不要说出你的数据除非你马上就要使用它，即函数式变成你无需提及你将要操作的数据是什么样子的，只有当你要处理这个数据时候它才需要出场。
+我们上面的那个构建solr query例子已经很明显，可以再看一个小例子：
+```javascript
+// 非 pointfree，因为提到了数据：data
+var snakeCase = function (name) {
+  return name.toLowerCase().replace('-', '_');
+};
+
+// pointfree
+var snakeCase = compose(replace('-', '_'), toLowerCase);
+
+//调用时候才需要数据
+snakeCase(name)
+```
+
+函数式编程和柯里化对于pointfree的实现帮助太大了，通过柯里化和组合或者管道你可以不用关心传进来的数据是什么，只需要关注处理它的规则即可，这也是 `Ramda`和`lodash`或者`underscore`的最大区别。
 
 #### 参考
 https://auth0.com/blog/glossary-of-modern-javascript-concepts
