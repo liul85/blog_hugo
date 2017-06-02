@@ -1,6 +1,6 @@
 ---
 date: "2017-04-05T08:35:17+08:00"
-title: "函数式编程初探"
+title: "函数式编程笔记(1)-基本概念"
 categories:
   - Development,
   - functional programming
@@ -267,4 +267,5 @@ snakeCase(name)
 函数式编程和柯里化对于pointfree的实现帮助太大了，通过柯里化和组合或者管道你可以不用关心传进来的数据是什么，只需要关注处理它的规则即可，这也是 `Ramda`和`lodash`或者`underscore`的最大区别。
 
 #### 参考
+https://drboolean.gitbooks.io/mostly-adequate-guide/content/
 https://auth0.com/blog/glossary-of-modern-javascript-concepts

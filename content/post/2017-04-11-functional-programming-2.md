@@ -5,7 +5,7 @@ tags:
   - functional programming
   - javascript
 date: "2017-04-11T08:43:29+08:00"
-title: "Hindley-Milner类型签名"
+title: "函数式编程笔记(2)-Hindley-Milner类型签名"
 url: /2017/04/11/hindley-milner-signature
 ---
 
@@ -115,3 +115,6 @@ compose(f, head) == compose(head, map(f));
 reverse :: Ord a => [a] -> [a]
 ```
 在这里`Ord a`约束了a必须是一个Ord对象，或者a必须实现Ord接口，这样就限制了函数的作用范围，这样的声明被称作类型约束。
+
+#### 参考
+https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch7.html
