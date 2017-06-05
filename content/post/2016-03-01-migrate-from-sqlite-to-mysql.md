@@ -1,9 +1,8 @@
-+++
-date = "2016-03-01T19:55:51+08:00"
-description = ""
-title = "migrate_from_sqlite_to_mysql"
-
-+++
+---
+date: 2016-03-01T19:55:51+08:00
+title: Migrate from sqlite to mysql
+url: /2016/03/01/migrate-from-sqlite-to-mysql
+---
 
 在开发环境中用的一直是sqlite，side project做出来后，就赶紧上线了，然后发现公司里注册人已经好多，看来得迁移到mysql上去了，不然感觉得天天备份db文件。
 ™
