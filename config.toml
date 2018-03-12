@@ -1,25 +1,37 @@
 baseurl = "http://blog.liul85.com"
 languageCode = "en-US"
-title = "liul85"
-theme = "hemingway"
-copyright = "&copy; theme by <a href=\"https://github.com/tanksuzuki\">Asuka Suzuki</a> 2016"
+title = "Ryan Liu"
+theme = "whiteplain"
+copyright = "&copy; Copyright 2018 Ryan Liu | theme by <a href=\"https://themes.gohugo.io/whiteplain/\">whiteplain</a>"
 disqusShortname = "liul85"
 googleAnalytics = ""
 
-[params]
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+    note = "/note/:year/:month/:day/:slug/"
 
-[params.highlight]
-style = "github"
-languages = ["go", "dockerfile", "javascript"]
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+[[menu.main]]
+    name = "Subscribe"
+    url = "/index.xml"
 
-[[params.social]]
-url = "https://github.com/liul85"
-fa_icon = "fa-github"
-
-[[params.social]]
-url = "https://twitter.com/liul85"
-fa_icon = "fa-twitter"
-
-[[params.social]]
-url = "/index.xml"
-fa_icon = "fa-rss"
+[params.author]
+    name = "Ryan Liu"
+    twitter = "liul85"
+    github = "liul85"
+    email = "liul85@gmail.com"
