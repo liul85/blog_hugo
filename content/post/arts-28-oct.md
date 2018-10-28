@@ -66,3 +66,5 @@ the way to understand and master a new technology sysmatically.
 > the low lever principle and implementations.
 > 6. 已有的实现和它之间的对比。  
 > comparasion between this new technology and existing teches. 
+
+出自 极客时间-左耳听风-高效学习：深度，归纳和坚持实践 [原文](https://time.geekbang.org/column/article/14360)
