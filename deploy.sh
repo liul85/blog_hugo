@@ -18,6 +18,7 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
+git pull --rebase
 git push origin master
 
 # Come Back
