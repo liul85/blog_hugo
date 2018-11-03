@@ -38,6 +38,23 @@ public class BubbleSort<T extends Comparable<T>> extends AbstractSort {
         }
     }
 }
+
+another implementation
+public class BubbleSort<T extends Comparable<T>> extends AbstractSort {
+    @Override
+    public void sort(T[] collection) {
+        boolean swapped = true;
+        while (swapped) {
+            swapped = false;
+            for (int i = 0; i < collection.length - 1; i++) {
+                if (lessThan(collection[i + 1], collection[i])) {
+                    swap(collection, i + 1, i);
+                    swapped = true;
+                }
+            }
+        }
+    }
+}
 ```
 best case time complexity - O(n^2)
 
