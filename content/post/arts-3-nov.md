@@ -9,27 +9,29 @@ __Longest Substring Without Repeating Characters__ [leetcode](https://leetcode.c
 
 大家都应该会想到这个最容易却最慢的算法,时间复杂度应该是O(n^2)
 ```Java
-public int lengthOfLongestSubString(String s) {
-    ArrayList<Character> subString = new ArrayList<>();
-    ArrayList<Character> tempSubstr = new ArrayList<>();
-    for (int i = 0; i < s.length(); i++) {
-        tempSubstr.clear();
-        for (int j = i; j < s.length(); j++) {
-            char c = s.charAt(j);
-            if (!tempSubstr.contains(c)) {
-                tempSubstr.add(c);
-            } else {
-                break;
+public class Solution {
+    public int lengthOfLongestSubStr(String s) {
+        int maxLength = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            ArrayList<Character> tempSubStr = new ArrayList<>();
+            for (int j = i; j < s.length(); j++) {
+                char c = s.charAt(j);
+                if (!tempSubStr.contains(c)) {
+                    tempSubStr.add(c);
+                } else {
+                    break;
+                }
+            }
+
+            if (tempSubStr.size() > maxLength) {
+                maxLength = tempSubStr.size();
             }
         }
-        if (tempSubstr.size() > subString.size()) {
-            subString = tempSubstr;
-        }
+
+        return maxLength;
     }
-
-    return subString.size();
 }
-
 ```
 
 有一个比较好的用区间来标识的算法(slide window)，设置一个可以滑动的半开半闭区间[i, j)来标识当前扫描的没有重复的subString，这个区间的右边会一直往右延伸，每扫描一个因为右边延伸而增加的字符，会判断是否在当前substring里，如果没有，则把它加进到Set中，然后计算最大未重复的数量为max(sizeOf(set), j - i),有重复的话，那么就从Set中删掉左边区间的值，左边区间往右挪。
