@@ -1,37 +1,53 @@
 baseurl = "http://blog.liul85.com"
-languageCode = "en-US"
-title = "Ryan Liu"
-theme = "whiteplain"
-copyright = "&copy; Copyright 2018 Ryan Liu | theme by <a href=\"https://themes.gohugo.io/whiteplain/\">whiteplain</a>"
+languageCode = "en"
+title = "Liang Liu"
+theme = "kiss"
+copyright = "&copy; <a href=\"https://github.com/ribice\">Liul85 | theme by Emir Ribic</a> 2017"
 disqusShortname = "liul85"
 googleAnalytics = ""
+Paginate = 5
+enableRobotsTXT = true
 
-[permalinks]
-    post = "/post/:year/:month/:day/:slug/"
-    note = "/note/:year/:month/:day/:slug/"
+[params.rss]
+includeContent = true
+authorName = "Ryan Liu"
+authorEmail = "liul85@gmail.com"
 
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 3
-[[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 4
-[[menu.main]]
-    name = "Subscribe"
-    url = "/index.xml"
+[params.assets]
+customCSS = ["css/custom.css"]
 
-[params.author]
-    name = "Ryan Liu"
-    twitter = "liul85"
-    github = "liul85"
-    email = "liul85@gmail.com"
+[params.info]
+adsense = "" # Adsense ID (ID only, without ca-pub-)
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "Liang Liu's blog" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
+related = true # Includes related articles at the bottom of the article
+
+[params.social.config]
+platforms = ["github","twitter","instagram","email","linkedin"]
+
+[params.opengraph.facebook]
+admins = [] # array of Facebook IDs
+appID = ""
+pageID = ""
+
+[params.opengraph.twitter]
+page = "liul85" # Twitter Page username. If not set, params.social.twitter will be used.
+
+[params.social]
+twitter = "liul85"
+github = "liul85"
+email = "liul85@gmail.com"
+linkedin = "liang-liu-39543929"
+instagram = "liul85"
+rss = "index.xml"
+
+[params.matomoAnalytics]
+siteID = 1
+rootURL = "//matomo.example.com/"
+
+[taxonomies]
+tag ="tags"
+
+[blackfriday]
+hrefTargetBlank = true

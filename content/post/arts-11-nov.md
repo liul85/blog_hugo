@@ -1,7 +1,7 @@
 ---
 title: "Arts 11 Nov"
 date: 2018-11-12T13:47:24+08:00
-tags: []
+tags: [ARTS]
 ---
 
 # Algorithm
