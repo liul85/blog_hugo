@@ -1,59 +1,50 @@
-theme = "liul85"
-title = "Liang Liu"
+baseurl = "https://liangliu.me/"
+title = "Think,Plan,Do"
+copyright = "Copyright &copy; 2019 - Liang Liu"
+canonifyurls = true
+theme = "hugo-kiera"
+
+paginate = 3
+
+summaryLength = 3
+enableEmoji = true
+pygmentsCodeFences = true
+
+#disqusShortname = "myShortName"
+
+# Note: to disable a social network icon delete or comment out the corresponding line
+[author]
+    name = "LiangLiu"
+    github = "liul85"
+    #gitlab = "username"
+    #linkedin = "username"
+    #facebook = "username"
+    twitter = "liul85"
+    #instagram = "username"
+    #stackoverflow = "username"
+    #youtube = "user/username" # or channel/channelname
 
 [params]
-sitename = "Liang's notes"
+    tagline = "Life is all about thinking"
+    description = "Kiera: A Hugo theme for creative and technical writing."
+    #images = [""] #This is used for opengraph/twitter cards.
+    customCSS = []  #Optional Customised CSS
+    #favicon = ""
+    #utterancesRepo = "username/repository"
+    #utterancesIssueTerm = "pathname"
+    #homepageLength = 10
+    #commentAutoload = true  #This mean reader don't need click, disqus comment autoload
 
-#baseurl = "http://liul85.me"
-#languageCode = "en"
-#title = "Liang Liu"
-#theme = "liul85"
-#copyright = "&copy; <a href=\"https://github.com/ribice\">Liul85 | theme by Emir Ribic</a> 2017"
-#disqusShortname = "liul85"
-#googleAnalytics = ""
-#Paginate = 5
-#enableRobotsTXT = true
+# uncomment to enable the Tags link on the main toolbar
+#  [[menu.main]]
+#    identifier = "tags"
+#    name = "Tags"
+#    url = "/tags"
+#    weight = 1
 
-#[params.rss]
-#includeContent = true
-#authorName = "Liang Liu"
-#authorEmail = "liul85@gmail.com"
-#
-#[params.assets]
-#customCSS = ["css/custom.css"]
-#
-#[params.info]
-#adsense = "" # Adsense ID (ID only, without ca-pub-)
-#enableSocial = true # Adds OpenGraph and Twitter cards
-#homeTitle = "Liang Liu's blog" # Title for home page
-#poweredby = true # Adds powered by hugo and kiss below Copyright
-#related = true # Includes related articles at the bottom of the article
-#
-#[params.social.config]
-#platforms = ["github","twitter","instagram","email","linkedin"]
-#
-#[params.opengraph.facebook]
-#admins = [] # array of Facebook IDs
-#appID = ""
-#pageID = ""
-#
-#[params.opengraph.twitter]
-#page = "liul85" # Twitter Page username. If not set, params.social.twitter will be used.
-#
-#[params.social]
-#twitter = "liul85"
-#github = "liul85"
-#email = "liul85@gmail.com"
-#linkedin = "liang-liu-39543929"
-#instagram = "liul85"
-#rss = "index.xml"
-#
-#[params.matomoAnalytics]
-#siteID = 1
-#rootURL = "//matomo.example.com/"
-#
-#[taxonomies]
-#tag ="tags"
-#
-#[blackfriday]
-#hrefTargetBlank = true
+# uncomment to enable the Categories link on the main toolbar
+#  [[menu.main]]
+#    identifier = "categories"
+#    name = "Categories"
+#    url = "/categories"
+#    weight = 1
